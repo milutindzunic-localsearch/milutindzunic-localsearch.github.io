@@ -1,0 +1,137 @@
+:root {
+    /* Font Family */
+    --ff-sans-serif: 'Overpass', sans-serif;
+
+    /* Font Weights */
+    --fw-normal: 400;
+    --fw-bold: 700;
+
+    /* Font Sizes */
+    --fs-400: 15px;
+    --fs-500: 1.125rem;
+    --fs-600: 1.725rem;
+
+    /* Colors */
+    --clr-primary: hsl(25, 97%, 53%);
+
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-300: hsl(217, 12%, 63%);
+    --clr-neutral-400: hsl(216, 12%, 54%);
+    --clr-neutral-600: hsl(213, 19%, 18%);
+    --clr-neutral-700: hsl(215, 20%, 16%);
+    --clr-neutral-800: hsl(228, 11%, 9%);
+}
+
+/* Global resets */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Image reset */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    font-family: var(--ff-sans-serif);
+    font-weight: var(--fw-normal);
+    font-size: var(--fs-400);
+    line-height: 1.7;
+    color: var(--clr-neutral-300);
+    background-color: var(--clr-neutral-800);
+}
+
+.container {
+    /* Used to center the card */
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin-inline: 1rem;
+}
+
+.card {
+    background-color: var(--clr-neutral-700);
+    padding: 2rem;
+    width: min(400px, 100%);
+    border-radius: 2rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.card--centered {
+    /* Hacky, this does not belong here, but I wanted to
+    make the rating and thank-you card have the same size, 
+    hence updated padding here */
+    padding-block: 3rem;
+    justify-items: center;
+    text-align: center;
+}
+
+.card__title {
+    font-size: var(--fs-600);
+    color: var(--clr-neutral-100);
+}
+
+.card__ratings {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.card__ratings > * {
+    cursor: pointer;
+}
+
+.card__ratings > *:hover {
+    color: var(--clr-neutral-100);
+    background-color: var(--clr-neutral-400);
+}
+
+.circle {
+    background-color: var(--clr-neutral-600);
+    width: 3.25rem;
+    height: 3.25rem;
+    border-radius: 100vw;
+    /* Center content within the circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle.selected {
+    background-color: var(--clr-primary);
+    color: var(--clr-neutral-100);
+}
+
+.card__button {
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+    background-color: var(--clr-primary);
+    color: var(--clr-neutral-100);
+    padding: 1rem;
+    border: none;
+    border-radius: 100vw;
+    cursor: pointer;
+}
+
+.card__button:hover {
+    background-color: var(--clr-neutral-100);
+    color: var(--clr-primary);
+}
+
+.pill {
+    color: var(--clr-primary);
+    background-color: var(--clr-neutral-600);
+    border-radius: 100vw;
+    padding-block: .325rem;
+    padding-inline: 1rem;
+}
+
+.hidden {
+    display: none;
+}
