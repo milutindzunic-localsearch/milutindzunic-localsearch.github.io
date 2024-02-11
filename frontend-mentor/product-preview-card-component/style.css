@@ -91,7 +91,7 @@ body {
 
 @media (width >= 600px) {
     .product {
-        --padding: 1.75rem;
+        --padding: 2rem;
         grid-template-columns: 1fr 1fr;
     }
 }
