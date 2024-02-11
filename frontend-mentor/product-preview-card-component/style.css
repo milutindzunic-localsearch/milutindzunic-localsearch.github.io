@@ -91,7 +91,7 @@ body {
 
 @media (width >= 600px) {
     .product {
-        --padding: 1rem;
+        --padding: 1.25rem;
         grid-template-columns: 1fr 1fr;
     }
 }
@@ -127,7 +127,7 @@ body {
 }
 
 .product__button {
-    padding: 1rem 2rem;
+    padding: .75rem 2rem;
     border-radius: .5rem;
     font-weight: var(--fw-bold);
     color: var(--clr-neutral-100);
